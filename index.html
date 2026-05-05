@@ -1,51 +1,141 @@
-<!DOCTYPE html>
+<!DOCTYPE <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Mirchi 360</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ff4500;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirchi 360 Restaurant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bg.jpg');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-align:center;
+}
+
+.logo{
+  width:130px;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-size:50px;
+  color:#ff3c3c;
+}
+
+.hero p{
+  margin:10px 0;
+}
+
+.btn{
+  margin-top:15px;
+  padding:12px 25px;
+  background:#ff3c3c;
+  color:white;
+  border-radius:25px;
+  text-decoration:none;
+}
+
+/* MENU */
+#menu{
+  padding:60px 20px;
+  background:#0f0f0f;
+  color:white;
+  text-align:center;
+}
+
+#menu h2{
+  font-size:35px;
+  margin-bottom:20px;
+}
+
+.menu-tabs button{
+  margin:8px;
+  padding:10px 20px;
+  border:none;
+  background:#222;
+  color:white;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+.menu-tabs button:hover{
+  background:#ff3c3c;
+}
+
+.menu-content img{
+  width:95%;
+  max-width:900px;
+  margin-top:20px;
+  border-radius:15px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:20px;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to Mirchi 360</h1>
-    </header>
-    <main>
-        <h2>Your professional landing page</h2>
-        <p>Discover the world of Mirchi 360, where your imagination meets technology!</p>
-    </main>
-    <footer>
-        <p>&copy; 2026 Mirchi 360</p>
-    </footer>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="logo.png" class="logo">
+  <h1>Mirchi 360</h1>
+  <p>Premium Taste of Sanghar</p>
+  <a href="#menu" class="btn">View Menu</a>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <h2>Our Menu</h2>
+
+  <div class="menu-tabs">
+    <button onclick="showMenu('menu1')">Main Menu</button>
+    <button onclick="showMenu('menu2')">Fast Food</button>
+  </div>
+
+  <div class="menu-content">
+    <img src="menu1.jpg" id="menuImage">
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/923XXXXXXXXX" class="whatsapp">💬</a>
+
+<script>
+function showMenu(type){
+  let img = document.getElementById("menuImage");
+
+  if(type === 'menu1') img.src = "menu1.jpg";
+  if(type === 'menu2') img.src = "menu2.jpg";
+}
+</script>
+
 </body>
 </html>
