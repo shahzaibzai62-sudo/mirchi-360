@@ -40,3 +40,9 @@ Add customer reviews/testimonials
 Add special offers or deals section
 Use subtle spicy-themed animations (like smoke/fire effects)# mirchi-360
 Mirchi 360
+<section class="hero">
+  <img src="logo.png" class="logo">
+  <h1>Mirchi 360</h1>
+  <p>Premium Taste of Sanghar</p>
+  <a href="#menu" class="btn">View Menu</a>
+</section>
